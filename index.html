@@ -48,17 +48,18 @@ input[type=text] {
 }   
     
 #myDIV1 {
-  position:fixed; left:300px; top:300px;color:white; font-size: 180px;
+  position:fixed; left:290px; top:300px;color:white; font-size: 180px;
 }
     
     #myDIV2 {
   position:fixed; left:550px; top:340px;color:white; font-size: 140px
 }
     #myDIV3 {
-  position:fixed; left:950px; top:300px;color:white; font-size: 180px
+  position:fixed; left:940px; top:300px;color:white; font-size: 180px
 }
 </style>
   
+    
     
 </head>
 <body>
@@ -84,47 +85,98 @@ input[type=text] {
 <p style = "position:fixed; left:950px; top:270px;color:white; font-size: 100px" >_ _ </p>
     
 <p id="demo"></p>
+    <p id="demo2" style = "position:fixed; left:500px; top:500px;color:white; font-size: 100px"></p>
   
 <div id="myDIV1"></div>
-    <div id="myDIV2"></div>
-    <div id="myDIV3"></div>
+<div id="myDIV2"></div>
+<div id="myDIV3"></div>
+
     
+
+
 <script>
+    
+  
+    
+    
+    
+    
+    
+    
 var demop=document.getElementById("demo");
 demop.style.color="white"
-
+var x1
 function myFunction1() {
-var x = document.getElementById("id1").value;
-  if (x!=="taa") {
+x1 = document.getElementById("id1").value;
+  if (x1!=="taa") {
   document.getElementById('id1').style.borderColor = "red";}
   else {
        document.getElementById('id1').style.borderColor = "green";
-       document.getElementById('myDIV1').innerHTML="taa" ;}
+       document.getElementById('myDIV1').innerHTML=x1 ;}
 } 
-    
+  var x2;  
 function myFunction2() {
-var x = document.getElementById("id2").value;
-  if (x!=="20156") {
+ x2 = document.getElementById("id2").value;
+  if (x2!=="20156") {
      
   document.getElementById('id2').style.borderColor = "red";}
   else {
        document.getElementById('id2').style.borderColor = "green"
-      document.getElementById('myDIV2').innerHTML="20156" ;}
+      document.getElementById('myDIV2').innerHTML=x2 ;}
 } 
- 
+    
+ var x3;
+    
 function myFunction3() {
-var x = document.getElementById("id3").value;
-  if (x!=="et") {
+ x3 = document.getElementById("id3").value;
+  if (x3!=="et") {
      
   document.getElementById('id3').style.borderColor = "red";}
   else {
        document.getElementById('id3').style.borderColor = "green"
-      document.getElementById('myDIV3').innerHTML="et" ;}
+      document.getElementById('myDIV3').innerHTML=x3 ;}
 } 
+    
+    
+    // Set the date we're counting down to
+var countDownDate = new Date("Feb 20, 2021 16:30:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo2").innerHTML =days + "d " +hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (x3=="et") {
+      if (x2="12156") {
+      if (x1== "taa") {
+    clearInterval(x);
+    document.getElementById("demo2").innerHTML = hours +"h"+ minutes + "m " + seconds + "s ";
+  }}}
+    if  (distance<0){clearInterval(x);
+    document.getElementById("demo2").innerHTML = "Time Over";}
+}, 1000);  
+    
  
+
     
     
 </script>
+ 
  
 </body>
 </html>
