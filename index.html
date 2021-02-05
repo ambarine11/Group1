@@ -11,14 +11,34 @@ h1 {
   text-align: center;
     font-size: 40px
 }
+    h2 {
+  color: white;
+  text-align: center;
+    font-size: 30px
+}
 
 p {
   font-family: white;
   font-size: 20px;
 }
     
+button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width:150px;
+  border-radius: 4px;
+}
+   
+    
 input[type=text] {
-  width: 20%;
+  width: 200px;
+  height: 50px;
   padding: 12px 20px;
   margin: 8px 4px;
   box-sizing: border-box;
@@ -26,6 +46,17 @@ input[type=text] {
   border-radius: 4px;
 
 }   
+    
+#myDIV1 {
+  position:fixed; left:300px; top:300px;color:white; font-size: 180px;
+}
+    
+    #myDIV2 {
+  position:fixed; left:550px; top:340px;color:white; font-size: 140px
+}
+    #myDIV3 {
+  position:fixed; left:950px; top:300px;color:white; font-size: 180px
+}
 </style>
   
     
@@ -33,19 +64,31 @@ input[type=text] {
 <body>
 
 <h1>YOU HAVE BEEN HACKED!!!</h1>
+<h2>ENTER THE CORRECT ANSWER FROM EACH CHALLENGE TO REVEAL THE SECRET CODE</h2>
 
-<input id="id1" type="text">
-<button onclick="myFunction1()">Submit</button>       
+<input style = "position:fixed; left:20px; top:200px" id="id1" type="text">     
+<input  style = "position:fixed; left:500px; top:200px" id="id2" type="text">
+<input style = "position:fixed; left:1000px; top:200px" id="id3" type="text"> 
     
-<input id="id2" type="text">
-<button onclick="myFunction2()">Submit</button> 
+<button style = "position:fixed; left:45px; top:270px" onclick="myFunction1()">Submit</button>   
+<button style = "position:fixed; left:525px; top:270px" onclick="myFunction2()">Submit</button>
+    
+<button style = "position:fixed; left:1025px; top:270px"onclick="myFunction3()">Submit</button> 
+    
+<p style = "position:fixed; left:70px; top:160px;color:white" >Challenge 1</p>
+<p style = "position:fixed; left:550px; top:160px;color:white" >Challenge 2</p>
+<p style = "position:fixed; left:1050px; top:160px;color:white" >Challenge 3</p>
 
-<input id="id3" type="text">
-<button onclick="myFunction3()">Submit</button> 
-
+<p style = "position:fixed; left:300px; top:270px;color:white; font-size: 100px" >_ _ _</p>
+<p style = "position:fixed; left:550px; top:270px;color:white; font-size: 100px" >_ _ _ _ _</p>
+<p style = "position:fixed; left:950px; top:270px;color:white; font-size: 100px" >_ _ </p>
+    
 <p id="demo"></p>
   
-
+<div id="myDIV1"></div>
+    <div id="myDIV2"></div>
+    <div id="myDIV3"></div>
+    
 <script>
 var demop=document.getElementById("demo");
 demop.style.color="white"
@@ -53,28 +96,30 @@ demop.style.color="white"
 function myFunction1() {
 var x = document.getElementById("id1").value;
   if (x!=="taa") {
-     demop.innerHTML = "wrong answer";
   document.getElementById('id1').style.borderColor = "red";}
-  else {demop.innerHTML = "good job";
-       document.getElementById('id1').style.borderColor = "green";}
+  else {
+       document.getElementById('id1').style.borderColor = "green";
+       document.getElementById('myDIV1').innerHTML="taa" ;}
 } 
     
 function myFunction2() {
 var x = document.getElementById("id2").value;
   if (x!=="20156") {
-     demop.innerHTML = "wrong answer";
+     
   document.getElementById('id2').style.borderColor = "red";}
-  else {demop.innerHTML = "good job";
-       document.getElementById('id2').style.borderColor = "green";}
+  else {
+       document.getElementById('id2').style.borderColor = "green"
+      document.getElementById('myDIV2').innerHTML="20156" ;}
 } 
  
 function myFunction3() {
 var x = document.getElementById("id3").value;
   if (x!=="et") {
-     demop.innerHTML = "wrong answer";
+     
   document.getElementById('id3').style.borderColor = "red";}
-  else {demop.innerHTML = "good job";
-       document.getElementById('id3').style.borderColor = "green";}
+  else {
+       document.getElementById('id3').style.borderColor = "green"
+      document.getElementById('myDIV3').innerHTML="et" ;}
 } 
  
     
