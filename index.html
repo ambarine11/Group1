@@ -97,7 +97,14 @@ input[type=text] {
 
 
 <script>
-   
+    
+  
+    
+    
+    
+    
+    
+    
 var demop=document.getElementById("demo");
 demop.style.color="white"
 var x1
@@ -135,7 +142,7 @@ function myFunction3() {
     
     
    
-var count=2400;
+var count=10;
 
 var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
 
@@ -154,14 +161,19 @@ function timer()
           document.getElementById("demo3").innerHTML="CONGRATS!!!"
      return;
   }}}
-    if (count==0){document.getElementById("timer").innerHTML= "TIME OVER"
+    else if (count<0){
+        clearInterval(counter);
+        document.getElementById("timer").innerHTML= "TIME OVER"
                  document.getElementById("timer").style.color="red"}
 
-  document.getElementById("timer").innerHTML= currentMinutes + " mins " + currentSeconds+ " seconds " + "Left"
+ else{ document.getElementById("timer").innerHTML= currentMinutes + " mins " + currentSeconds+ " seconds " + "Left"}
 } 
     
     
+
+    
 </script>
+ 
  
 </body>
 </html>
