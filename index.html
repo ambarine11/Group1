@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1.0">
+
+    
 <head>
 <style>
 body {
@@ -53,14 +55,14 @@ input[type=text] {
 }   
     
 #myDIV1 {
-  position:fixed; left:290px; top:300px;color:white; font-size: 180px;
+  position:fixed; left:400px; top:320px;color:white; font-size: 160px;
 }
     
     #myDIV2 {
-  position:fixed; left:550px; top:340px;color:white; font-size: 140px
+  position:fixed; left:620px; top:340px;color:white; font-size: 140px
 }
     #myDIV3 {
-  position:fixed; left:940px; top:300px;color:white; font-size: 180px
+  position:fixed; left:860px; top:340px;color:white; font-size: 140px
 }
 
 </style>
@@ -74,22 +76,22 @@ input[type=text] {
 <h1>YOU HAVE BEEN HACKED!!!</h1>
 <h2>ENTER THE CORRECT ANSWER FROM EACH CHALLENGE TO REVEAL THE SECRET CODE</h2>
 
-<input style = "position:fixed; left:20px; top:200px" id="id1" type="text">     
-<input  style = "position:fixed; left:500px; top:200px" id="id2" type="text">
-<input style = "position:fixed; left:1000px; top:200px" id="id3" type="text"> 
+<input style = "position:absolute; left:120px; top:200px" id="id1" type="text">     
+<input  style = "position:absolute; left:600px; top:200px" id="id2" type="text">
+<input style = "position:absolute; left:1100px; top:200px" id="id3" type="text"> 
     
-<button style = "position:fixed; left:45px; top:270px" onclick="myFunction1()">Submit</button>   
-<button style = "position:fixed; left:525px; top:270px" onclick="myFunction2()">Submit</button>
+<button style = "position:fixed; left:145px; top:270px" onclick="myFunction1()">Submit</button>   
+<button style = "position:fixed; left:625px; top:270px" onclick="myFunction2()">Submit</button>
     
-<button style = "position:fixed; left:1025px; top:270px"onclick="myFunction3()">Submit</button> 
+<button style = "position:fixed; left:1125px; top:270px"onclick="myFunction3()">Submit</button> 
     
-<p style = "position:fixed; left:70px; top:160px;color:white" >Challenge 1</p>
-<p style = "position:fixed; left:550px; top:160px;color:white" >Challenge 2</p>
-<p style = "position:fixed; left:1050px; top:160px;color:white" >Challenge 3</p>
+<p style = "position:fixed; left:170px; top:160px;color:white" >Challenge 1</p>
+<p style = "position:fixed; left:650px; top:160px;color:white" >Challenge 2</p>
+<p style = "position:fixed; left:1150px; top:160px;color:white" >Challenge 3</p>
 
-<p style = "position:fixed; left:300px; top:270px;color:white; font-size: 100px" >_ _ _</p>
-<p style = "position:fixed; left:550px; top:270px;color:white; font-size: 100px" >_ _ _ _ _</p>
-<p style = "position:fixed; left:950px; top:270px;color:white; font-size: 100px" >_ _ </p>
+<p style = "position:fixed; left:380px; top:270px;color:white; font-size: 100px" >_ _ _</p>
+<p style = "position:fixed; left:620px; top:270px;color:white; font-size: 100px" >_ _ _</p>
+<p style = "position:fixed; left:860px; top:270px;color:white; font-size: 100px" >_ _ _ _</p>
     
 <p id="demo"></p>
     <p id="demo2" style = "position:fixed; left:500px; top:500px;color:white; font-size: 100px"></p>
@@ -116,7 +118,7 @@ demop.style.color="white"
 var x1
 function myFunction1() {
 x1 = document.getElementById("id1").value;
-  if (x1!=="taa") {
+  if (x1!=="sla") {
   document.getElementById('id1').style.borderColor = "red";}
   else {
        document.getElementById('id1').style.borderColor = "green";
@@ -125,7 +127,7 @@ x1 = document.getElementById("id1").value;
   var x2;  
 function myFunction2() {
  x2 = document.getElementById("id2").value;
-  if (x2!=="20156") {
+  if (x2!=="gob") {
      
   document.getElementById('id2').style.borderColor = "red";}
   else {
@@ -137,7 +139,7 @@ function myFunction2() {
     
 function myFunction3() {
  x3 = document.getElementById("id3").value;
-  if (x3!=="et") {
+  if (x3!=="1619") {
      
   document.getElementById('id3').style.borderColor = "red";}
   else {
@@ -157,9 +159,9 @@ function timer()
   count=count-1;
     var currentMinutes = Math.floor(count/ 60);
     var currentSeconds = count % 60;
-  if (x3=="et") {
-      if (x2="12156") {
-      if (x1== "taa") {
+  if (x3=="1619") {
+      if (x2="gob") {
+      if (x1== "sla") {
    
      clearInterval(counter);
      document.getElementById("timer").innerHTML= currentMinutes + " mins " + currentSeconds+ " seconds " 
